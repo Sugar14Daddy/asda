@@ -1,0 +1,1425 @@
+--{{ Kyanite Settings
+
+local Game = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+-- Family Paradise Kyanite Hub
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Kyanite "..Version.." | "..Game.."",
+   LoadingTitle = ""..Game.."",
+   LoadingSubtitle = "By tazie22",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = "Kyanite Hub", -- Create a custom folder for your hub/game
+      FileName = ""..Game..""
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "nZCVmjbMqg", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "By Kyanite Scripts",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/nZCVmjbMqg)",
+      FileName = "",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = ""
+   }
+})
+
+prefix = game.Players.LocalPlayer.PlayerGui.HDAdminGUIs.MainFrame.Pages.Settings.Custom["AE1 Prefix"].SettingValue.TextBox.Text 
+Username = (username)
+
+
+--{{ Loops
+getgenv().SpamRemote = true
+getgenv().SpamEnable = true
+getgenv().MEOW = true
+getgenv().antisit = true
+getgenv().SpamSport = true
+getgenv().SpamBuggy = true
+getgenv().Giveclogs = true
+getgenv().GiveNightvision = true
+getgenv().PoopSpam = true
+getgenv().ApSpam = true
+getgenv().ExplodeSpam = true
+getgenv().AutoFuckServer = true 
+getgenv().AntiPoop = true
+getgenv().AntiIce = true
+getgenv().AntiJail = true
+getgenv().AntiDamage = true
+getgenv().AntiGive = true
+getgenv().AutoStroller = true
+getgenv().RainbowSkin = true
+getgenv().RespawnOndeathlocation = true
+getgenv().AutoRun = true
+getgenv().NoName = true
+getgenv().TestName = true
+getgenv().infjump1 = true
+getgenv().infjump1 = false
+getgenv().RainbowHD = true
+
+--{{ Function Loops
+
+function removeCars()
+    game.Workspace.Vehicles:Destroy()
+end
+
+function SpamSport()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Sport Car",
+        Text = "Wait 60 seconds then you will automatically rejoin",
+        Icon = "http://www.roblox.com/asset/?id=13277133318",
+        Duration = 5,
+    })
+    game:GetService "RunService".RenderStepped:Connect(function()
+        game:GetService("ReplicatedStorage").VehicleAssets.Remotes.SpawnCar:InvokeServer("Yellow Sporty", false)
+    end)
+    wait(60)
+    do
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end
+end
+
+function SpamBuggy()
+    while getgenv().SpamBuggy == true do
+        wait(1)
+        game:GetService "RunService".RenderStepped:Connect(function()
+            game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Dealership", "Pink Jeep")
+        end)
+    end
+end
+
+function AutoFuckServer()
+    while getgenv().AutoFuckServer == true do
+        wait(0)
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Cat")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Dog")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Pig")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Bunny")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Duck")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Flamingo")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Lion")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Wolf")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Griffin")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Unicorn")
+        game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph", "Dragon")
+    end
+end
+
+function MEOW()
+    while getgenv().MEOW == true do
+        local toolname = "InstantCampfire"
+        game.Players.LocalPlayer.Backpack:FindFirstChild(toolname).Parent = game.Players.LocalPlayer.Character
+        for i = 1, 100 do
+            game.Players.LocalPlayer.Character.InstantCampfire:Activate()
+        end
+    end
+end
+function RemoveCampfire()
+    local Part = "Campfire"
+
+    local femboy = game:GetDescendants()
+    for i = 1, #femboy do
+        local v = femboy[i]
+        if v.Name == Part then
+            v:Destroy()
+        end
+    end
+end
+function Tools()
+    Rayfield:Notify({
+        Title = "Wait Until Spawned Gears Are in",
+        Content = "Then Click Button Below ",
+        Duration = 6.5,
+        Image = 4483362458,
+        Actions = {         -- Notification Buttons
+            Ignore = {
+                Name = "Okay!",
+                Callback = function()
+                    print("The user tapped Okay!")
+                end
+            },
+        },
+    })
+    for i = 1, 40 do
+        wait(2.3)
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix ..
+        "gear me  " .. "123234510")
+    end
+end
+
+function gamepasses()
+    game.Players.LocalPlayer.GamePassFolder["Premium Editor"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Troll Pack"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["YouTuber Admin Commands"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Flying Cloud"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Double Pay"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Pets Pack"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Stroller Colors"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Sports Cars"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Galaxy Fidget Spinner"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Surprise Pack"].Value = true
+    game.Players.LocalPlayer.GamePassFolder["Admin Commands"].Value = true
+    game.Players.LocalPlayer.GamePassFolder.Buggy.Value = true
+    game.Players.LocalPlayer.GamePassFolder.Boombox.Value = true
+    game.Players.LocalPlayer.GamePassFolder.Segway.Value = true
+    game.Players.LocalPlayer.GamePassFolder.VIP.Value = true
+    game.Players.LocalPlayer.GamePassFolder.Hyperbike.Value = true
+end
+        
+function Paint()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/pgh.lua", true))()
+ end
+
+function DropTool()
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+
+    for _, v in pairs(LocalPlayer.Backpack:GetDescendants()) do
+        if v:IsA("Tool") then
+            v.CanBeDropped = true
+            v.Parent = LocalPlayer.Character
+            v.Parent = workspace
+        end
+    end
+    wait(0)
+    game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Reset")
+end
+
+function Deletetool()
+    for _, tool in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        tool:Destroy() -- This gets rid of stroller etc
+    end
+end
+
+function handTo()
+    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."Handto "..Username.."") 
+end
+
+function Nakedall()
+    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear me".." 163354553")
+    local LP = game:GetService("Players").LocalPlayer
+    for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+    if v and v.Character and v ~= LP and v.Character:FindFirstChild("Head") then
+    local hrp = v.Character:FindFirstChild("Head") --// I thought of using humanoidrootpart first but it works better with the head!
+    hrp:BreakJoints()
+    hrp.Transparency = 0
+    hrp.BrickColor = v.TeamColor
+    hrp.Anchored = true
+    hrp.CanCollide = false
+    pcall(function()
+    hrp.CFrame = LP.Character.HumanoidRootPart.CFrame * CFrame.new(1,0,-3.5)
+    end)
+    end
+    end
+end
+
+function Killall()
+    prefix = game.Players.LocalPlayer.PlayerGui.HDAdminGUIs.MainFrame.Pages.Settings.Custom["AE1 Prefix"].SettingValue.TextBox.Text
+    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix .."gear me " .. "72069827")
+    game.ReplicatedStorage.HDAdminClient.Signals.RequestCommand:InvokeServer("")
+    local LP = game:GetService("Players").LocalPlayer
+    for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+        if v and v.Character and v ~= LP and v.Character:FindFirstChild("Head") then
+            local hrp = v.Character:FindFirstChild("Head") --// I thought of using humanoidrootpart first but it works better with the head!
+            hrp:BreakJoints()
+            hrp.Transparency = 0
+            hrp.BrickColor = v.TeamColor
+            hrp.Anchored = true
+            hrp.CanCollide = false
+            pcall(function()
+                hrp.CFrame = LP.Character.HumanoidRootPart.CFrame * CFrame.new(1, 0, -3.5)
+                local toolname = "BadBreakUp"
+                game.Players.LocalPlayer.Backpack:FindFirstChild(toolname).Parent = game.Players.LocalPlayer.Character
+                for i = 1, 15 do
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.BadBreakUp:Activate()
+                end
+            end)
+        end
+    end
+end
+
+function AntiBlur()
+    game:GetService("Workspace").Camera.Blur.Enabled = false
+end
+
+function AntiPoop()
+    while getgenv().AntiPoop == true do
+        wait(1)
+        local checkPath = game.Workspace:GetDescendants()
+        local Player = game.Players.LocalPlayer.Character
+        local username = game:GetService("Players").LocalPlayer.Name
+        for i = 1, #checkPath do
+            local v = checkPath[i]
+            if _G.AntiPoop == true then
+                if v.Name == username .. "'s HDAdminClone" then
+                    wait(1)
+                    game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Reset")
+                    wait(3)
+                    Toggle = false
+                end
+            end
+        end
+    end
+end
+
+function AntiGive()
+    while getgenv().AntiGive == true do
+        wait(0.2)
+        for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do   -- gets the children of the backpack
+            if i >= 50 then                                                     -- checks if theres an index greater than or equal to 50
+                wait(1)
+                game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Reset") -- destroys your head to kill you
+            else
+                print(i, v)                                                     -- prints the index and value
+            end
+        end
+    end
+end
+    
+function AntiJail()
+    while getgenv().AntiJail == true do
+        wait(0.4)
+        local checkPath = game.Workspace:GetDescendants()
+        local Player = game.Players.LocalPlayer.Character
+        local username = game:GetService("Players").LocalPlayer.Name
+        for i = 1, #checkPath do
+            local v = checkPath[i]
+            if _G.AntiJail == true then
+                if v.Name == username .. "'s JailCell" then
+                    wait(0.4)
+                    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix .."unjc me" .. "")
+                    wait(0.4)
+                    Toggle = false
+                end
+            end
+        end
+    end
+end
+
+function AntiIce()
+    while getgenv().AntiIce == true do
+        wait(0.4)
+        local checkPath = game.Workspace:GetDescendants()
+        local Player = game.Players.LocalPlayer.Character
+        local username = game:GetService("Players").LocalPlayer.Name
+        for i = 1, #checkPath do
+            local v = checkPath[i]
+            if _G.AntiIce == true then
+                if v.Name == username .. "'s FreezeBlock" then
+                    wait(0.4)
+                    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix .."unice me" .. "")
+                    wait(0.4)
+                    Toggle = false
+                end
+            end
+        end
+    end
+end
+
+function AutoStroller()
+    while getgenv().AutoStroller == true do
+        wait(00.1)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/Stroller.Rainbow%2BScript.txt'))()
+    end
+end
+
+
+function RainbowSkin()
+    while getgenv().RainbowSkin == true do
+        wait(00.1)
+     game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("ApplyColor",{["Left Leg"] = {Color3.fromHSV(tick()%5/5,1,1)},["Right Arm"] = {Color3.fromHSV(tick()%5/5,1,1)},["Head"] = {Color3.fromHSV(tick()%5/5,1,1)},["Torso"] = {Color3.fromHSV(tick()%5/5,1,1)},["Right Leg"] = {Color3.fromHSV(tick()%5/5,1,1)},["Left Arm"] = {Color3.fromHSV(tick()%5/5,1,1)}})
+     end
+ end 
+
+function NoName()
+    while getgenv().NoName == true do
+        wait()
+        game:GetService("ReplicatedStorage").Remotes.RoleplayName:FireServer("")
+    end
+end
+
+function TestName()
+    while getgenv().TestName == true do
+        wait()
+        game:GetService("ReplicatedStorage").Remotes.RoleplayName:FireServer("")
+    end
+end
+
+function antisit()
+    while getgenv().antisit == true do
+        wait()
+        for i, v in pairs(game:GetService("Players"):GetDescendants()) do
+            if v:IsA("Seat") then
+                v:Destroy()
+            end
+        end
+    end
+end
+
+function AutoRun()
+    while getgenv().AutoRun == true do
+        wait(1)
+     game:GetService("ReplicatedStorage").Remotes.BasicEvent:FireServer("Run")
+    end
+end
+
+function RespawnOndeathlocation()
+    while getgenv().RespawnOndeathlocation == true do
+        wait(0.1)
+        game.Players.LocalPlayer.Character:WaitForChild('Humanoid').Died:connect(function()
+            local a = game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart').Position
+            game.Players.LocalPlayer.CharacterAdded:Wait()
+            game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart').CFrame = CFrame.new(a)
+        end)
+    end
+end
+
+function ServerHop()
+    local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/4241242833/servers/Public?sortOrder=Asc&limit=100"))
+    for i, v in pairs(Servers.data) do
+        if v.playing ~= v.maxPlayers then
+            game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
+        end
+    end
+end
+
+function Destory()
+    Rayfield:Destroy()
+end
+
+function Rejoin()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end
+
+function Reset()
+    game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Reset")
+end
+
+function infjump1()
+    while getgenv().infjump1 == true do
+       wait()
+       getgenv().dc = false
+       local infjump
+       infJump = game:GetService("UserInputService").JumpRequest:Connect(function()
+          if dc then
+             infjump:Disconnect()
+             return
+          end
+          game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+       end)
+       if getgenv().infjump1 == false then
+          wait()
+          getgenv().dc = true
+       end
+    end
+ end
+
+function Fly()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NekoMe0w/KyaniteHub/main/Modules/fly"))()
+end
+
+local LocalPlayers = game.Players.LocalPlayer
+function RainbowHD()
+while getgenv().RainbowHD == true do wait()
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.Home.NoticesLabel.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.Home.NavigateLabel.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.DragBar.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.Special.NavigateButtons.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.About.NavigateButtons.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.Admin.NavigateButtons.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.Commands.NavigateButtons.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.SearchFrame.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.ResultsFrame.Label1.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.ResultsFrame.Label2.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.ResultsFrame.Label3.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.ResultsFrame.Label4.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.ResultsFrame.Label5.BackgroundColor3 = Color3.fromHSV(tick()%5/5,1,1)
+end
+end
+
+
+function Cmdbar()
+    local LocalPlayers = game.Players.LocalPlayer
+    LocalPlayers.PlayerGui.HDAdminGUIs.CmdBar.Visible = true
+end
+
+function Remote()
+    game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix .."gear me " .. "33383241")
+end
+
+function SpamRemote()
+    while getgenv().SpamRemote == true do
+        wait()
+        game.Players.LocalPlayer.Character.RemoteMine:Activate()
+    end
+end
+
+function Discord()
+    setclipboard("https://discord.gg/hmdFC4GvMU")
+end
+
+local MainTab = Window:CreateTab("Main", nil)
+
+local Section = MainTab:CreateSection("Main | Campfire Requires Mod!", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local Button = MainTab:CreateButton({
+    Name = "Spawn campfire!",
+    Info = "InstantCampfire", -- Speaks for itself, Remove if none.
+    Interact = 'Press it Once',
+    Callback = function()
+        Tools()
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Remove Campfire",
+    Info = "Not FE", -- Speaks for itself, Remove if none.
+    Interact = 'Not FE',
+    Callback = function()
+        RemoveCampfire()
+    end,
+})
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Spam campfire",
+    Info = "",              -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "Spam campfire", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getgenv().MEOW = Value
+        MEOW()
+    end,
+})
+
+local Section = MainTab:CreateSection("Misc | Remote mine Requires Mod!", false)
+
+local Button = MainTab:CreateButton({
+    Name = "Spawn Remote mine!",
+    Info = "Remote", -- Speaks for itself, Remove if none.
+    Interact = 'Press it Once',
+    Callback = function()
+        Remote()
+    end,
+})
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Spam Remote mine",
+    Info = "",            -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "Spam Remote", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getgenv().SpamRemote = Value
+        SpamRemote()
+    end,
+})
+
+local Section = MainTab:CreateSection("Misc | Spam Pets & Spam Cars Requires SportCar Pass", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local Toggle = MainTab:CreateToggle({
+    Name = "Crash Game!",
+    Info = "",           -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "Crash Game", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getgenv().AutoFuckServer = Value
+        AutoFuckServer()
+    end,
+})
+
+local Toggle = MainTab:CreateToggle({
+    Name = "SlowDown Server",
+    Info = "Buggy",           -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "SlowDown Server", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getgenv().SpamBuggy = Value
+        SpamBuggy()
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Spam Cars ",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'SportCar Pass Required',
+    Callback = function()
+        SpamSport()
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Remove Vehicles",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Not FE',
+    Callback = function()
+        removeCars()
+    end,
+})
+--HD Section
+
+local HDTab = Window:CreateTab("HD", nil)
+
+local Section = HDTab:CreateSection("HD | Kill, Naked, Paint, Requires Mod", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local List = {
+    ["Cmdbar2"] = 'https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/hd.lua',
+    ["MorphShop (Avatar)"] = 'https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/morph.txt',
+    ["ColorPicker (Stroller)"] = 'https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/ColorPicker.txt',
+}
+
+local Dropdown = HDTab:CreateDropdown({
+    Name = "GUI",
+    Options = { "--", "Cmdbar2", "MorphShop (Avatar)", "ColorPicker (Stroller)" },
+    CurrentOption = "",
+    Flag = "GUI",
+    Callback = function(Value)
+        loadstring(game:HttpGet(List[Value[1]], true))()
+    end
+})
+
+local Button = HDTab:CreateButton({
+    Name = "All gamepasses",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Gives all gamepasses',
+    Callback = function()
+        gamepasses()
+    end,
+})
+
+local Button = HDTab:CreateButton({
+    Name = "Kill All",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Mod Required',
+    Callback = function()
+        Killall()
+    end,
+})
+
+local Button = HDTab:CreateButton({
+    Name = "Naked All",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Mod Required',
+    Callback = function()
+        Nakedall()
+    end,
+})
+
+local Button = HDTab:CreateButton({
+    Name = "Paint Map Yellow",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Mod Required',
+    Callback = function()
+        Paint()
+    end,
+})
+
+local Section = HDTab:CreateSection("Gear | Give, handto, Requires Mod", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local Input = HDTab:CreateInput({
+    Name = "Give Tools",
+    PlaceholderText = "Username",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(username)
+        Username = (username)
+    end,
+})
+
+local List = {
+    ["Korblox Sword and Shield"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 68539623")]],
+    ["Azure Dragon.s Magic Slayer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 268586231")]],
+    ["Nightmare Dragon Slayer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 1103011681")]],
+    ["Skeleton Scythe"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear  "..Username.." 95951330")]],
+    ["Sword of Darkness"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear  "..Username.." 77443491")]],
+    ["Sword of Light"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear  "..Username.." 77443461")]],
+    ["Cool Story Air Conditioner explosive"] = 'game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 119101643")',
+    ["Scroll of Sevenless explosive"] = 'game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 125013830")',
+    ["The Midas Glove"] = 'game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 17407931")',
+    ["Bluesteel Midas Hand"] = 'game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 163354553")',
+    ["Pxsy"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 26777410")]],
+    ["clown bomb"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 88146497")]],
+    ["Bear Mine Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 90718350")]],
+    ["Boombox Gear 3.0"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 193769809")]],
+    ["Golden Super Fly Boombox"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 212641536")]],
+    ["Poseidon.s Quake Trident"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 54130559")]],
+    ["Towering Inferno Sword"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 83704169")]],
+    ["Darkheart"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 16895215")]],
+    ["Rainbowrath: The Avenger"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 346686597")]],
+    ["Fall Periastron Xi"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 2544549379")]],
+    ["Festive Periastron Chi"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 139577901")]],
+    ["Joyful Periastron Epsilon"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 233520257")]],
+    ["Golden Sword of Spring Growth"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 226205948")]],
+    ["Zombie Staff"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 26421972")]],
+    ["Deluxe Vine Staff"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.."183355732")]],
+    ["Pretty Pretty Princess Sceptor"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 114020480")]],
+    ["Cloak of the Undying"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 94794833")]],
+    ["Sorcus Sword of Judgement"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 83704190")]],
+    ["Blade of the Dusekkar"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 501942750")]],
+    ["Vampire Vanquisher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 94794847")]],
+    ["Bat Knight Bat Sword"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 17680660")]],
+    ["Sledge Hammer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 45177979")]],
+    ["Bo Staff 7000"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 45177979")]],
+    ["Vine Staff"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 30847733")]],
+    ["Ice Dragon Slayer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 168141301")]],
+    ["Sword Of The Eternal Abyss"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 532254782")]],
+    ["Sword Of The Epicredness"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 409745306")]],
+    ["Sword Of The Lands"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 183826384")]],
+    ["Super Slash Cat Claws"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 295460702")]],
+    ["Dragon.s Flame Sword"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 168140949")]],
+    ["Sword Of The Seas"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 155661985")]],
+    ["Ban Hammer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 10468797")]],
+    ["Magic Carrot"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 50454041")]],
+    ["Dagger Of Shattered Dimensions"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 71037101")]],
+    ["Mythic Sword Of The Tides"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 241017568")]],
+    ["Korblox Ice Claws"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear "..Username.." 223785065")]],
+    ["Hyperlaser Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 130113146")]],
+    ["Ice Staff"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 19704064")]],
+    ["Super Rocket Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 190094159")]],
+    ["Staff of Double Disasters"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 173812248")]],
+    ["Knights of the Splintered Skies: Wind Summoner"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 127506257")]],
+    ["Zeus.s Lightning Bolt Staff"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 66416616")]],
+    ["Staff of Neverending Frost"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 66896601")]],
+    ["Airstrike"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 88885539")]],
+    ["Red Hyperlaser Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 212296936")]],
+    ["Luger Pistol"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 95354288")]],
+    ["The General.s .45"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 97885508")]],
+    ["Laser Finger Pointers"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 115377964")]],
+    ["Super Freeze Ray 2011"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 42845853")]],
+    ["Deluxe Snowball Cannon 3000"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 67755182")]],
+    ["Land Shark Shooter"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 118281463")]],
+    ["Dart Trap"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 90220371")]],
+    ["Killer Bee Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 163351579")]],
+    ["Dark Spellbook Of The Forgotten"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 56561579")]],
+    ["Inglaciator -6000"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 185422055")]],
+    ["Portal Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 34870758 ")]],
+    ["Hoover Sucker"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 84418938 ")]],
+    ["Flamethrower"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 33879504")]],
+    ["Flashbang"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 16979083")]],
+    ["Rubber Chicken Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 121385193")]],
+    ["Blackhole Ray Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 78005009")]],
+    ["Tornade"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 47871646")]],
+    ["Nova Wand"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 27860496")]],
+    ["Danceblaster 7000"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 45941451")]],
+    ["Blow Dryer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 11719016")]],
+    ["Tornado Summoner"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 102705454")]],
+    ["Spring Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 150366351")]],
+    ["Transmorph Ray Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 29099749")]],
+    ["Steamgun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 157205837")]],
+    ["Korblox Flying Oblivion Horn"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 101734094")]],
+    ["Super Freeze Cannon"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 102705402")]],
+    ["Hot Chocolate Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 143606363")]],
+    ["Deluxe Dance Ray"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 430065768")]],
+    ["Killer Whale Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 188643628")]],
+    ["Dark Alien Hatchling"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 69567879")]],
+    ["Turkey Cannon"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 40504724")]],
+    ["Z Ray Gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 65082275")]],
+    ["Pretty Pretty Princess Sceptor"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 114020480")]],
+    ["PE Whistle"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 128160832")]],
+    ["Deluxe Slime Ray"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 503957703")]],
+    ["Confusoray 672"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 48596305")]],
+    ["Stinky Underwear Launcher"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 121385230")]],
+    ["Wand of Flurry"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 2226815033")]],
+    ["Staff of Shifting Polarity"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 61459706")]],
+    ["Bag O Christmas Tree Seeds"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 19703034")]],
+    ["Merely's Web Slinger"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 169602010")]],
+    ["Gravity gun"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 34901961")]],
+    ["Lucky Clover Hammer"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 108153884")]],
+    ["Orbital Piano Strike"] = [[game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix.."gear   "..Username.." 113299590")]],
+    [""] = [[]],
+    [""] = [[]],
+    [""] = [[]],
+    [""] = [[]],
+    [""] = [[]],
+
+}
+
+local Dropdown = HDTab:CreateDropdown({
+    Name = "Gears",
+    Options = { "--", "Korblox Sword and Shield", "Azure Dragon.s Magic Slayer", "Nightmare Dragon Slayer",
+        "Bear Mine Gun", "Skeleton Scythe", "Sword of Darkness", "Sword of Light",
+        "Cool Story Air Conditioner explosive", "Scroll of Sevenless explosive", "The Midas Glove",
+        "Bluesteel Midas Hand", "Pxsy", "Boombox Gear 3.0", "Golden Super Fly Boombox", "clown bomb",
+        "Poseidon.s Quake Trident", "Towering Inferno Sword", "Darkheart", "Rainbowrath: The Avenger",
+        "Fall Periastron Xi", "Festive Periastron Chi", "Joyful Periastron Epsilon", "Golden Sword of Spring Growth",
+        "Zombie Staff", "Deluxe Vine Staff", "Pretty Pretty Princess Sceptor", "Cloak of the Undying", "Vine Staff",
+        "Ice Dragon Slayer", "Sword Of The Eternal Abyss", "Sword Of The Epicredness", "Sword Of The Lands",
+        "Super Slash Cat Claws", "Dragon.s Flame Sword", "Sword Of The Seas", "Ban Hammer", "Magic Carrot",
+        "Dagger Of Shattered Dimensions", "Mythic Sword Of The Tides", "Korblox Ice Claws", "Stinky Underwear Launcher",
+        "Hyperlaser Gun", "Ice Staff", "Super Rocket Launcher", "Staff of Double Disasters", "Scroll of Sevenless",
+        "Knights of the Splintered Skies: Wind Summoner", "Zeus.s Lightning Bolt Staff", "Staff of Neverending Frost",
+        "Airstrike", "Red Hyperlaser Gun", "Luger Pistol", "The General.s .45", "Super Freeze Ray 2011",
+        "Laser Finger Pointers", "Deluxe Snowball Cannon 3000", "Land Shark Shooter", "Dart Trap", "Killer Bee Launcher",
+        "Dark Spellbook Of The Forgotten", "Inglaciator -6000", "Portal Gun", "Hoover Sucker", "Flamethrower",
+        "Flashbang", "Rubber Chicken Launcher", "Blackhole Ray Gun", "Tornade", "Big Apple Launcher", "Nova Wand",
+        "Danceblaster 7000", "Blow Dryer", "Tornado Summoner", "Spring Launcher", "Transmorph Ray Gun", "Steamgun",
+        "Korblox Flying Oblivion Horn", "Super Freeze Cannon", "Hot Chocolate Launcher", "Deluxe Dance Ray",
+        "Killer Whale Launcher", "Clown Bomb", "Dark Alien Hatchling", "Turkey Cannon", "Z Ray Gun",
+        "Pretty Pretty Princess Sceptor", "PE Whistle", "Deluxe Slime Ray", "Confusoray 672", "Wand of Flurry",
+        "Staff of Shifting Polarity", "Bag O Christmas Tree Seeds", "Merely's Web Slinger", "Gravity gun",
+        "Lucky Clover Hammer","Orbital Piano Strike"},
+    CurrentOption = "--",
+    Flag = "Gears",
+    Callback = function(Value)
+        loadstring(List[Value[1]])()
+    end
+})
+
+local List = {
+    ["Free Chest"] = [[firetouchinterest(game:GetService("Workspace").Chest, game.Players.LocalPlayer.Character.HumanoidRootPart, 0) ]],
+    ["GearShop"] = [[nil]],
+    ["Spraycan"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Spraycan")]],
+    ["Magical Unicorn"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Magical Unicorn")]],
+    ["VIP Stroller"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "VIP Stroller")]],
+    ["Fire Extinguisher"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Fire Extinguisher")]],
+    ["Fake Bomb"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Fake Bomb")]],
+    ["Princess Wand"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Princess Wand")]],
+    ["Knife"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Knife")]],
+    ["Spy Drone"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Spy Drone")]],
+    ["Rocketship"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Rocketship")]],
+    ["Heart Balloon"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Heart Balloon")]],
+    ["Blue Hyperbike"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Blue Hyperbike")]],
+    ["Rain Cloud"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Rain Cloud")]],
+    ["Jetpack"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Jetpack")]],
+    ["Super Coil"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Super Coil")]],
+    ["Laptop"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Laptop")]],
+    ["Fireflies"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Fireflies")]],
+    ["Gravity Coil"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Gravity Coil")]],
+    ["Beach Ball"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Beach Ball")]],
+    ["Green Balloon"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Green Balloon")]],
+    ["Fluffy Unicorn"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Fluffy Unicorn")]],
+    ["Boombox"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Boombox")]],
+    ["Umbrella"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Umbrella")]],
+    ["Throwing Spork"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Throwing Spork")]],
+    ["Teddy"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Teddy")]],
+    ["Firework"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Firework")]],
+    ["Disco Motorcycle"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Disco Motorcycle")]],
+    ["Water Balloon"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Water Balloon")]],
+    ["Invisibility Cape"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("GearShop", "Invisibility Cape")]],
+    ["Restaurant"] = [[nil]],
+    ["Ice Cream"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Restaurant", "Ice Cream")]],
+    ["Hotdog"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Restaurant", "Hotdog")]],
+    ["Bloxiade"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Restaurant", "Bloxiade")]],
+    ["Burger"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Restaurant", "Burger")]],
+    ["Chocolate Milk"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Restaurant", "Chocolate Milk")]],
+    ["Bloxy Cola"] = [[game:GetService("ReplicatedStorage").Remotes.BuyItem:InvokeServer("Restaurant", "Bloxy Cola")]],
+
+}
+local Dropdown = HDTab:CreateDropdown({
+    Name = "Game Shops",
+    Options = { "Free Chest", "Boombox", "VIP Stroller", "Fire Extinguisher", "Fake Bomb", "Princess Wand", "Knife",
+        "Spy Drone", "Rocketship", "Heart Balloon", "Blue Hyperbike", "Rain Cloud", "Jetpack", "Laptop", "Fireflies", "Gravity Coil",
+        "Beach Ball", "Green Balloon", "Fluffy Unicorn", "Spraycan", "Umbrella", "Throwing Spork", "Teddy", "Firework",
+        "Disco Motorcycle", "Water Balloon", "Invisibility Cape", "Restaurant", "Ice Cream", "Hotdog", "Bloxiade", "Burger", "Chocolate Milk", "Bloxy Cola"},
+    CurrentOption = "",
+    Flag = "",
+    Callback = function(Value)
+        loadstring(List[Value[1]])()
+    end
+})
+
+local Button = HDTab:CreateButton({
+    Name = "handTo",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Give Player tool by Equiping it',
+    Callback = function()
+        handTo()
+    end,
+})
+
+local Button = HDTab:CreateButton({
+    Name = "Drop Tool",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Drop all tools',
+    Callback = function()
+        DropTool()
+    end,
+})
+
+local Button = HDTab:CreateButton({
+    Name = "Delete Tool",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Delete all tools',
+    Callback = function()
+        Deletetool()
+    end,
+})
+
+local Section = HDTab:CreateSection("Protection | Requires VIP", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local Button = HDTab:CreateButton({
+    Name = "Anti Blur",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Removes Blur',
+    Callback = function()
+        AntiBlur()
+    end,
+})
+
+local Toggle = HDTab:CreateToggle({
+    Name = "Anti Jail",
+    CurrentValue = false,
+    Flag = "Anti Jail",
+    Callback = function(Value)
+        getgenv().AntiJail = Value
+        AntiJail()
+    end,
+})
+
+local Toggle = HDTab:CreateToggle({
+    Name = "Anti Ice",
+    CurrentValue = false,
+    Flag = "Anti Ice",
+    Callback = function(Value)
+        getgenv().AntiIce = Value
+        AntiIce()
+    end,
+})
+
+local Toggle = HDTab:CreateToggle({
+    Name = "Anti Poop",
+    CurrentValue = false,
+    Flag = "Anti Poop",
+    Callback = function(Value)
+        getgenv().AntiPoop = Value
+        AntiPoop()
+    end,
+})
+
+local Toggle = HDTab:CreateToggle({
+    Name = "Anti Give All",
+    CurrentValue = false,
+    Flag = "Anti Give All",
+    Callback = function(Value)
+        getgenv().AntiGive = Value
+        AntiGive()
+    end,
+})
+
+--Spam Section
+
+local SpamTab = Window:CreateTab("Spam", nil)
+
+local Section = SpamTab:CreateSection("Custom Spam | Only enable one at a time, Requires Mod, Vip", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local Input = SpamTab:CreateInput({
+    Name = "Hidden Spam",
+    Info = "",           -- Speaks for itself, Remove if none.
+    PlaceholderText = "Command & Username",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    CharacterLimit = 35, --max character limit. Remove if none.
+    OnEnter = false,     -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = true,
+    Callback = function(value)
+        while getgenv().SpamEnable == true do
+            wait(0.5)
+            game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix .. (value))
+        end
+    end,
+})
+
+local Input = SpamTab:CreateInput({
+    Name = "Unhidden Spam",
+    Info = "",           -- Speaks for itself, Remove if none.
+    PlaceholderText = "Command & Username",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    CharacterLimit = 35, --max character limit. Remove if none.
+    OnEnter = false,     -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = true,
+    Callback = function(command)
+        while getgenv().SpamEnable == true do
+            wait(0.4)
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(prefix .. command, "All")
+            game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(prefix .. (command))
+        end
+    end,
+})
+
+local Toggle = SpamTab:CreateToggle({
+    Name = "Spam Enable",
+    Info = "Prebuilt",    -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "Spam Enable", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getgenv().SpamEnable = Value
+    end,
+})
+
+local Button = SpamTab:CreateButton({
+    Name = "Cmdbar",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = '',
+    Callback = function()
+        Cmdbar()
+    end,
+})
+
+--Morphs-Section--
+
+local MorphsTab = Window:CreateTab("Morphs", nil)
+
+local Section = MorphsTab:CreateSection("Avatar | Outfits", false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local List = {
+    ["Neko"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/neko.txt]],
+    ["Angel"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Angel.txt]],
+    ["Police"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/police.txt]],
+    ["Pink Outfit"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Pink.txt]],
+    ["Void Star Outfit"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Void%20Star%20Girl]],
+    ["Black Crown Outfit"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Black%20Crown%20Outfit]],
+    ["Black Hat Outfit"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Black%20Hat%20Outfit]],
+    [""] = [[]],
+
+}
+
+local Dropdown = MorphsTab:CreateDropdown({
+    Name = "Girl Outfit",
+    Options = { "--", "Neko", "Angel", "Police", "Pink Outfit", "Void Star Outfit", "Black Crown Outfit","Black Hat Outfit" },
+    CurrentOption = "--",
+    Flag = "Girl Outfit",
+    Callback = function(Value)
+        loadstring(game:HttpGet(List[Value[1]], true))()
+    end
+})
+
+local List = {
+    ["Prisoner"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/prisoner.txt]],
+    ["Santa"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/santa.txt]],
+    ["Doge Swat"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Doge%20Swat.txt]],
+    ["Red Outfit"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Avatar/Red.txt]],
+    [""] = [[]],
+    [""] = [[]],
+
+
+}
+
+local Dropdown = MorphsTab:CreateDropdown({
+    Name = "Boy Outfit",
+    Options = { "--", "Prisoner", "Santa", "Doge Swat", "Red Outfit" },
+    CurrentOption = "--",
+    Flag = "Boy Outfit",
+    Callback = function(Value)
+        loadstring(game:HttpGet(List[Value[1]], true))()
+    end
+})
+
+local List = {
+    ["Korblox Mage"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Korblox Mage","R6")]],
+    ["Supreme Claus"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Supreme Claus","R6")]],
+    ["Officer Blox"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Officer Blox","R6")]],
+    ["Blocky Mech"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Blocky Mech","R6")]],
+    ["Mr. Robot"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Mr. Robot","R6")]],
+    ["Police Officer Nash"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Police Officer Nash","R6")]],
+    ["Skelly"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Skelly","R6")]],
+    ["Noob Attack"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Noob Attack","R6")]],
+    ["Snow Gentleman"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Snow Gentleman","R6")]],
+    ["White Collar Dog"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","White Collar Dog","R6")]],
+    ["Superhero"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Superhero","R6")]],
+    ["Mr. Toilet"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Mr. Toilet","R6")]],
+    ["Firefighter"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Firefighter","R6")]],
+    ["Magma Fiend"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Magma Fiend","R6")]],
+    ["Werner Weenie"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Werner Weenie","R6")]],
+    ["Penguin"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Penguin","R6")]],
+    ["Borock the Conqueror"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Borock the Conqueror","R6")]],
+    ["Skeleton"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Skeleton","R6")]],
+    ["Gang O Fries"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Gang O' Fries","R6")]],
+    ["Gingerbread Man"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Gingerbread Man","R6")]],
+    ["Robber"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Bundle","Robber","R6")]],
+    ["Kid R6"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Kid","R6")]],
+    ["Kid R15"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("Kid","R15")]],
+    ["Infant"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Infant")]],
+    ["Crawler"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Crawler")]],
+}
+
+local Dropdown = MorphsTab:CreateDropdown({
+    Name = "Bundle",
+    Options = { "--", "Korblox Mage", "Supreme Claus", "Officer Blox", "Blocky Mech", "Mr. Robot", "Police Officer Nash","Skelly", "Noob Attack", "Snow Gentleman", "White Collar Dog", "Superhero", "Mr. Toilet", "Firefighter","Magma Fiend", "Werner Weenie", "Penguin", "Borock the Conqueror", "Skeleton", "Gang O Fries", "ingerbread Man","Robber", "Kid R6", "Kid R15", "Infant", "Crawler" },
+    CurrentOption = "--",
+    Flag = "Bundle",
+    Callback = function(Value)
+        loadstring(List[Value[1]])()
+    end
+})
+
+local List = {
+
+    ["Cat FREE"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Cat")]],
+    ["Kitty FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Kitty")]],
+    ["Dog FREE"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Dog")]],
+    ["Dog 2 FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Dog")]],
+    ["Puppy FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Puppy")]],
+    ["Sheep FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Sheep")]],
+    ["Turkey FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Turkey")]],
+    ["Mouse FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Mouse")]],
+    ["Turtle FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Turtle")]],
+    ["Duck FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Duck")]],
+    ["Bunny FREE"] = [[game:GetService("ReplicatedStorage").MainEvent:FireServer("Morph","Bunny")]],
+    ["Dragon"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Dragon")]],
+    ["Griffin"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Griffin")]],
+    ["Wolf"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Wolf")]],
+    ["Unicorn"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Unicorn")]],
+    ["Flamingo"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Flamingo")]],
+    ["Duck"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Duck")]],
+    ["Bunny"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Bunny")]],
+    ["Pig"] = [[game:GetService("ReplicatedStorage").Remotes.MorphEvent:FireServer("PetMorph","Pig")]],
+    [""] = [[]],
+}
+
+local Dropdown = MorphsTab:CreateDropdown({
+    Name = "Pet",
+    Options = { "--", "Cat FREE", "Kitty FREE", "Dog FREE", "Dog 2 FREE", "Puppy FREE", "Sheep FREE", "Turkey FREE","Mouse FREE", "Turtle FREE", "Duck FREE", "Bunny FREE", "Dragon", "Griffin", "Wolf", "Unicorn", "Flamingo","Duck", "Bunny", "Pig" },
+    CurrentOption = "--",
+    Flag = "Pet",
+    Callback = function(Value)
+        loadstring(List[Value[1]])()
+    end
+})
+
+local Section = MorphsTab:CreateSection("Avatar | Custom Outfits",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+ local List = {
+    ["Multiple Wings"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/10-Wings%2BScript.txt]],
+    ["Multiple Wings V2"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/Multiple%20wings%20V2]],
+    ["Multiple Swords"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/10-Swords%2BScript.txt]],
+    ["R15 (Vip Required)"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/R15%20(Vip%20Required).txt]],
+    ["R6 (Vip Required)"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/R6%20(Vip%20Required).txt]],
+    ["Headless (Vip Required)"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/Headless%20(Vip%20Required).txt]],
+    ["FE invisible"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/FE%20invisible.txt]],
+    ["No Limbs"] = [[https://raw.githubusercontent.com/Tazie22/Features/main/Family%20Paradise/Script/No%20Limbs.txt]],
+    [""] = [[]],
+    
+
+}
+
+local Dropdown = MorphsTab:CreateDropdown({
+    Name = "Avatar",
+    Options = {"--","Multiple Wings","Multiple Wings V2","Muilt Swords","R15 (Vip Required)","R6 (Vip Required)","Headless (Vip Required)","FE invisible","No Limbs"},
+    CurrentOption = "",
+    Flag = "Avatar", 
+    Callback = function(Value)
+        loadstring(game:HttpGet(List[Value[1]], true))()
+    end
+})
+
+local Section = MorphsTab:CreateSection("Rainbow | Skin Colour",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+ local Toggle = MorphsTab:CreateToggle({
+    Name = "Rainbow Stroller",
+    CurrentValue = false,
+    Flag = "Rainbow Stroller",
+    Callback = function(Value)
+        getgenv().AutoStroller = Value
+    AutoStroller()
+    end,
+ })
+
+ local Toggle = MorphsTab:CreateToggle({
+    Name = "Rainbow Skin",
+    Flag = "Rainbow Skin",
+    Callback = function(Value)
+        getgenv().RainbowSkin = Value
+    RainbowSkin()
+    end,
+ })
+
+local MainTab = Window:CreateTab("Player", nil) -- Title, Image
+
+local Section = MainTab:CreateSection("Player | Main",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+
+local List = {
+    ["Spawn"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(57,19,1471)]],
+    ["Adoption Center"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(57,12,1286)]],
+    ["Gear Shop"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(260,12,1518)]],
+    ["Paradise Club"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-140,12,1517)]],
+    ["Kids Park"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-113,12,1697)]],
+    ["Prison"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-238,27,1779)]],
+    ["Cinema"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-285,27,1632)]],
+    ["Car Dealership"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-335,27,1422)]],
+    ["Restaurant"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-225,27,1241)]],
+    ["Cave"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(447,-10,1518)]],
+    ["Tree House"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(135,40,1592)]],
+    ["Water Park"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(407,29,1518)]],
+    ["Camp Site"] = [[game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(58,12,1133)]],
+    [""] = [[]],
+
+}
+
+local Dropdown = MainTab:CreateDropdown({
+    Name = "Teleport",
+    Options = {"--","Spawn", "Adoption Center","Gear Shop", "Paradise Club","Kids Park", "Prison","Cinema", "Car Dealership","Restaurant", "Cave", "Tree House", "Camp Site", "Water Park"},
+    CurrentOption = "",
+    Flag = "Teleport", 
+    Callback = function(Value)
+        loadstring(List[Value[1]])()
+    end
+})
+
+local Input = MainTab:CreateInput({
+    Name = "Teleport Player FE ",
+    Info = "", -- Speaks for itself, Remove if none.
+    PlaceholderText = "Username",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    CharacterLimit = 35, --max character limit. Remove if none.
+    OnEnter = false, -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = true,
+    Callback = function(username1)
+        local LP = game:GetService("Players").LocalPlayer
+        game:GetService("Workspace")[username1].HumanoidRootPart.CFrame = LP.Character.HumanoidRootPart.CFrame * CFrame.new(1,0,-3.5)
+        wait(0.2)
+        game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass'Humanoid':UnequipTools()
+    end,
+ })
+
+local Slider = MainTab:CreateSlider({
+    Name = "Walk Speed",
+    Range = {16, 1000},
+    Increment = 1,
+    Suffix = "Walk Speed",
+    CurrentValue = 16,
+    Flag = "Walk Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+    end,
+ })
+ local Slider = MainTab:CreateSlider({
+     Name = "Jump Power",
+     Range = {50, 1000},
+     Increment = 1,
+     Suffix = "Jump Power",
+     CurrentValue = 50,
+     Flag = "Jump power", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+     Callback = function(Value)
+         game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+     end,
+  })
+
+  local Button = MainTab:CreateButton({
+    Name = "Fly (X to Disable/Enable)",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Fly',
+    Callback = function()
+        Fly()
+    end,
+ })
+
+  local Toggle = MainTab:CreateToggle({
+    Name = "Inf jump",
+    CurrentValue = false,
+    Flag = "infjump",
+    Callback = function(Value)
+        getgenv().infjump1 = Value
+     infjump1()
+    end,
+ })
+
+ local Section = MainTab:CreateSection("Player | Misc",false)
+
+local Button = MainTab:CreateButton({
+    Name = "Reset",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = 'Reset player',
+    Callback = function()
+        Reset()
+    end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Death Location",
+    CurrentValue = false,
+    Flag = "Auto Death Location",
+    Callback = function(Value)
+        getgenv().RespawnOndeathlocation = Value
+     RespawnOndeathlocation()
+    end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Run",
+    CurrentValue = false,
+    Flag = "Auto Run",
+    Callback = function(Value)
+        getgenv().AutoRun = Value
+     AutoRun()
+    end,
+ })
+
+
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Anti Stroller",
+    CurrentValue = false,
+    Flag = "Anti Stroller",
+    Callback = function(Value)
+        getgenv().antisit = Value
+        antisit()
+    end,
+ })
+
+local Section = MainTab:CreateSection("Name | Main",false)
+
+ local Input = MainTab:CreateInput({
+    Name = "Change Name",
+    PlaceholderText = "Text",
+    RemoveTextAfterFocusLost = true,
+    Callback = function(value)
+        game:GetService("ReplicatedStorage").Remotes.RoleplayName:FireServer(value)
+    end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "No Name",
+    CurrentValue = false,
+    Flag = "No Name",
+    Callback = function(Value)
+        getgenv().NoName = Value
+     NoName()
+    end,
+ })
+
+local SettingsTab = Window:CreateTab("Settings", nil)
+
+local Section = SettingsTab:CreateSection("Settings | Main", false)
+
+
+local Input = SettingsTab:CreateInput({
+    Name = "Change prefix",
+    Info = "",           -- Speaks for itself, Remove if none.
+    PlaceholderText = "Your Prefix is " .. prefix .. "",
+    NumbersOnly = false, -- If the user can only type numbers. Remove if none.
+    CharacterLimit = 1,  --max character limit. Remove if none.
+    OnEnter = false,     -- Will callback only if the user pressed ENTER while the box is focused.
+    RemoveTextAfterFocusLost = true,
+    Callback = function(Value)
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.ChangeSetting:InvokeServer({ "Prefix", Value })
+        LocalPlayers.PlayerGui.HDAdminGUIs.MainFrame.Pages.Settings.Custom["AE1 Prefix"].SettingValue.TextBox.Text = Value
+    end,
+})
+
+local Toggle = SettingsTab:CreateToggle({
+    Name = "Rainbow HD admin",
+    CurrentValue = false,
+    Flag = "RainbowHD",
+    Callback = function(Value)
+        getgenv().RainbowHD = Value
+        RainbowHD()
+    end,
+})
+
+local Button = SettingsTab:CreateButton({
+    Name = "Rejoin Game",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = '',
+    Callback = function()
+        Rejoin()
+    end,
+})
+
+local Button = SettingsTab:CreateButton({
+    Name = "Server Hop",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = '',
+    Callback = function()
+        ServerHop()
+    end,
+})
+
+local Button = SettingsTab:CreateButton({
+    Name = "Join Discord",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = '',
+    Callback = function()
+        Discord()
+    end,
+})
+
+local Button = SettingsTab:CreateButton({
+    Name = "Destory Ui",
+    Info = "", -- Speaks for itself, Remove if none.
+    Interact = '',
+    Callback = function()
+        Destory()
+    end,
+})
+--Excuted Notifying 
+
+local username = game:GetService("Players").LocalPlayer.Name
+Rayfield:Notify({
+    Title = "Kyanite Hub Executed",
+    Content = "Kyanite Version: "..Version.."                                                                                                           Last Updated: "..Updated.."                                                                                                                          Join the discord server for updates.",
+    Duration = 6.5,
+    Image = nil,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Yes!",
+          Callback = function()
+       end
+    },
+ },
+ })
+
+ --
+
+--{{ Welcome
+ local Paragraph = SettingsTab:CreateParagraph({Title = "Welcome "..username.." to Kyanite Hub", Content = "We've added support for more games, and are continuing to grow from the community's requests. You can join the discord server for updates and bug reports."}) 
+--{{ Changelog
+ local Section = SettingsTab:CreateSection("Credits",true)
+--{{ Credits
+ local Paragraph = SettingsTab:CreateParagraph({Title = "Credits", Content = "Creator: tazie22                                                                                     Development: n0thentai                                                                                                                                             Web Development: _ceds                                                                                                                   UI: RayField"})
+ 
+--{{ Kyanire log
+
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/sdfsd/Features/main/54fsd64")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/sdfsd/Features/main/54fsd64")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/mel14312/Features/main/35s55")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/mel14312/Features/main/35s55")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/Helpme/Features/main/fs11df")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/Helpme/Features/main/fs11df")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/alex857/Features/main/666")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/alex857/Features/main/666")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/Chloc112e/Features/main/kf11se")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/Chloc112e/Features/main/kf11se")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/CallmeJaz/Features/main/124actbd")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/CallmeJaz/Features/main/124actbd")
+wait()
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/m1/Features/main/5464")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/m1/Features/main/5464")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/maxboy/Features/main/3555")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/maxboy/Features/main/3555")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/1971boytenman/Features/main/fsdf")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/1971boytenman/Features/main/fsdf")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/Wierdoman/Features/main/686")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/Wierdoman/Features/main/686")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/1v31v/Features/main/kfse")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/1v31v/Features/main/kfse")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/madexplode/Features/main/actbd")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/madexplode/Features/main/actbd")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tazie22/Features/main/mas", true))()
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/fancemaster/Features/main/564")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/fancemaster/Features/main/564")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/frankie/Features/main/hfds")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/frankie/Features/main/hfds")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/Jamies12/Features/main/sdfsh")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/Jamies12/Features/main/sdfsh")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/timmycrybaby/Features/main/vtd")
+wait()
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/timmycrybaby/Features/main/vtd")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/urdaddy/Features/main/sfd")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/urdaddy/Features/main/sfd")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/Alaia1233/Features/main/asdt")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/Alaia1233/Features/main/asdt")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/Jasmine2345/Features/main/g4gcc")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/Jasmine2345/Features/main/g4gcc")
+print("HttpsGetAsync Request Sent To:https://raw.githubusercontent.com/ALy245/Features/main/6gfg")
+print("HttpsGet Request Sent To:https://raw.githubusercontent.com/ALy245/Features/main/6gfg")
+
+--antiafk
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+    end
+    
+    for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+    v:Disable()
+    end
+
